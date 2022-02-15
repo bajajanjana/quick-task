@@ -1,0 +1,30 @@
+.loginCard{
+    width:70%;
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+    border-radius: 5px;
+    box-shadow: 0 0 19px rgb(82 82 82 / 10%);
+    padding: 2rem;
+}
+.loginCard input{
+    width:100%;
+    height: 2.5rem;
+    padding: 1rem;
+}
+.loginButton{
+    height: 2rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#fff;
+    background-color: #026AA7;
+    border-radius: 5px;
+    border: none;
+}
+.loginCard p{
+    color:#026AA7;
+    text-align: center;
+    cursor: pointer;
+}
