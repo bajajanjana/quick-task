@@ -1,0 +1,26 @@
+.ListSection{
+    padding:3rem;
+    display: flex;
+    gap:4rem;
+    overflow-x:auto;
+    min-height: 90vh;
+}
+.addListBtn{
+    height:3rem;
+    background-color: #ebecf0;
+    min-width:15rem;
+    border:none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 1rem;
+    border-radius: 5px;
+}
+.addListBtn>span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.addIcon{
+    font-size: 1.5rem;
+}
