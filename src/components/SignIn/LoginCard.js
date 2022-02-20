@@ -10,12 +10,12 @@ const LoginCard = (props) => {
 		<div className={styles.loginCard}>
 			<input
 				type="email"
-				value={logInDetails.mail}
+				// value={logInDetails.mail}
 				placeholder="Enter mail"
 			></input>
 			<input
 				type="password"
-				value={logInDetails.password}
+				// value={logInDetails.password}
 				placeholder="Enter Password"
 			></input>
 			<button

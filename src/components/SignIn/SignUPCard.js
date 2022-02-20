@@ -14,17 +14,17 @@ const SignUpCard = (props) => {
 		<div className={styles.loginCard}>
 			<input
 				type="email"
-				value={signUpDetails.mail}
+				// value={signUpDetails.mail}
 				placeholder="Enter mail"
 			></input>
 			<input
 				type="password"
-				value={signUpDetails.password}
+				// value={signUpDetails.password}
 				placeholder="Enter password"
 			></input>
 			<input
 				type="password"
-				value={signUpDetails.password}
+				// value={signUpDetails.password}
 				placeholder="Confirm password"
 			></input>
 			<button

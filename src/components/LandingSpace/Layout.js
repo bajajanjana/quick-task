@@ -10,30 +10,28 @@ const Layout = () => {
   const [cardList, setCardList] = useState(LIST);
   const [addListCardBtnActive, setAddListCardBtnActive] = useState(true);
 
-  const updateList=(updateList)=>{
+  const updateList = (updateList) => {
     setCardList(updateList);
-  }
+  };
 
   const addListHandler = (title) => {
     cardList.push({ title: ` ${title} `, taskCard: [] });
-    const newCardList = cardList.map(item=>item);
+    const newCardList = cardList.map((item) => item);
     setCardList(newCardList);
-
   };
-  const addListCardBtnHandler = (isNewListCreated,title) => {
-    if (isNewListCreated)
-    {
+  const addListCardBtnHandler = (isNewListCreated, title) => {
+    if (isNewListCreated) {
       setAddListCardBtnActive(true);
       addListHandler(title);
       return;
     }
-     setAddListCardBtnActive(true);
+    setAddListCardBtnActive(true);
   };
   return (
     <div>
       <Navigation />
       <div className={styles.ListSection}>
-        {cardList.map((list) => {
+        {cardList.map((list, index) => {
           return (
             <div>
               <ListCard
@@ -52,13 +50,13 @@ const Layout = () => {
               setAddListCardBtnActive(false);
             }}
           >
-            <spna>
+            <span>
               <IoIcon4.IoIosAdd className={styles.addIcon}></IoIcon4.IoIosAdd>
-            </spna>
+            </span>
             <span>Add another list</span>
           </button>
         ) : (
-          <CreateListCard addListCardBtnHandler={addListCardBtnHandler}  />
+          <CreateListCard addListCardBtnHandler={addListCardBtnHandler} />
         )}
       </div>
     </div>
