@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./LoginCard.module.css";
 
 const LoginCard = (props) => {
-	const [logInDetails] = useState({
-		mail: "",
-		password: "",
-	});
+	// const [logInDetails] = useState({
+	// 	mail: "",
+	// 	password: "",
+	// });
 	return (
 		<div className={styles.loginCard}>
 			<input

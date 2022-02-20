@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./LoginCard.module.css";
 
 const SignUpCard = (props) => {
-	const [signUpDetails] = useState({
-		mail: "",
-		password: "",
-	});
+	// const [signUpDetails] = useState({
+	// 	mail: "",
+	// 	password: "",
+	// });
 
 	// setSignUpDetailshandler=()=>{
 

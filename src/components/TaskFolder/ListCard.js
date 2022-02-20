@@ -26,7 +26,7 @@ const ListCard = (props) => {
       <h4>{props.title}</h4>
       <hr className={styles.line}></hr>
       <div className={styles.taskList}>
-        {props.taskCard.map((item,index) => {
+        {props.taskCard.map((item) => {
           return <TaskCard desc={item.desc}/>;
         })}
       </div>
