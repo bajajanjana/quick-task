@@ -3,7 +3,7 @@
     display: flex;
     gap:4rem;
     overflow-x:auto;
-    min-height: 90vh;
+    min-height: 94vh;
 }
 .addListBtn{
     height:3rem;

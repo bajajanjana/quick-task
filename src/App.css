@@ -14,3 +14,24 @@ button{
   cursor: pointer;
   text-decoration: none;
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background:none; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #D1D1D1; 
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #026AA7; 
+}

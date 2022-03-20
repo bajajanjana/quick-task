@@ -9,6 +9,7 @@ import CreateListCard from "../TaskFolder/CreateListCard";
 const Layout = () => {
   const [cardList, setCardList] = useState(LIST);
   const [addListCardBtnActive, setAddListCardBtnActive] = useState(true);
+  const [dragListIndex, setDragListIndex] = useState();
 
   const updateList = (updateList) => {
     setCardList(updateList);
@@ -27,6 +28,17 @@ const Layout = () => {
     }
     setAddListCardBtnActive(true);
   };
+
+  const removeDraggedListHandler = (index) => {
+    setDragListIndex(index);
+  };
+  const shiftListHandler = (title, index) => {
+    var list=cardList[dragListIndex];
+    cardList.splice(dragListIndex, 1);
+    cardList.splice(index, 0,list);
+    let updatedList = cardList.map((item) => item);
+    updateList(updatedList);
+  };
   return (
     <div>
       <Navigation />
@@ -39,6 +51,9 @@ const Layout = () => {
                 taskCard={list.taskCard}
                 updateList={updateList}
                 list={cardList}
+                index={index}
+                shiftListCard={shiftListHandler}
+                removeDraggedList={removeDraggedListHandler}
               />
             </div>
           );
