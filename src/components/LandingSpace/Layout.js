@@ -5,16 +5,21 @@ import LIST from "../../MOCKDATA/List.json";
 import ListCard from "../TaskFolder/ListCard";
 import * as IoIcon4 from "react-icons/io";
 import CreateListCard from "../TaskFolder/CreateListCard";
+import { useEffect } from "react/cjs/react.production.min";
 
 const Layout = () => {
   const [cardList, setCardList] = useState(LIST);
   const [addListCardBtnActive, setAddListCardBtnActive] = useState(true);
   const [dragListIndex, setDragListIndex] = useState();
+  const [dragInListIndex, setDragInListIndex] = useState();
+  const [dragTaskIndex, setDragTaskIndex] = useState();
 
+  const dragInListHandler = (dragInIndex) => {
+    setDragInListIndex(dragInIndex);
+  };
   const updateList = (updateList) => {
     setCardList(updateList);
   };
-
   const addListHandler = (title) => {
     cardList.push({ title: ` ${title} `, taskCard: [] });
     const newCardList = cardList.map((item) => item);
@@ -33,11 +38,22 @@ const Layout = () => {
     setDragListIndex(index);
   };
   const shiftListHandler = (title, index) => {
-    var list=cardList[dragListIndex];
+    var list = cardList[dragListIndex];
     cardList.splice(dragListIndex, 1);
-    cardList.splice(index, 0,list);
+    cardList.splice(index, 0, list);
     let updatedList = cardList.map((item) => item);
     updateList(updatedList);
+  };
+  const popTaskHandler = (listIndex, taskIndex) => {
+    console.log("li", listIndex);
+    console.log("ti", taskIndex);
+    console.log(cardList[listIndex].title);
+    cardList[listIndex].taskCard.splice(taskIndex, 1);
+    let updatedList = cardList.map((item) => item);
+    updateList(updatedList);
+  };
+  const setDragTaskIndexHandler = (taskIndex) => {
+    setDragTaskIndex(taskIndex);
   };
   return (
     <div>
@@ -52,8 +68,13 @@ const Layout = () => {
                 updateList={updateList}
                 list={cardList}
                 index={index}
+                dragTaskIndex={dragTaskIndex}
+                setDragTaskIndex={setDragTaskIndexHandler}
                 shiftListCard={shiftListHandler}
                 removeDraggedList={removeDraggedListHandler}
+                dragInListIndex={dragInListIndex}
+                dragInListHandler={dragInListHandler}
+                popTaskHandler={popTaskHandler}
               />
             </div>
           );
