@@ -3,11 +3,11 @@
 
 #### Quick Task is an application that helps to manage tasks for a team as well as for an individual.
 
-### Create List of Tasks
-![Screenshot (144)](https://user-images.githubusercontent.com/59495227/184584871-1064fccc-e1fa-4e3f-9827-517e2c446ea9.png)
-This window provide option to create section with section name and an optional description.
 ### List of Tasks
 ![Screenshot (143)](https://user-images.githubusercontent.com/59495227/184584922-f790de78-e2f9-4207-8f86-4b53d6766629.png)
+
+### Create List of Tasks
+![Screenshot (144)](https://user-images.githubusercontent.com/59495227/184584871-1064fccc-e1fa-4e3f-9827-517e2c446ea9.png)
 
 
 ## 🔥 Features
